@@ -1,0 +1,121 @@
+{
+  "name": "Clara Pipeline",
+  "nodes": [
+    {
+      "id": "1",
+      "name": "Webhook: Pipeline A",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 200],
+      "parameters": {
+        "path": "pipeline-a",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "2",
+      "name": "Execute: Pipeline A",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [500, 200],
+      "parameters": {
+        "command": "cd /app && python scripts/pipeline_a.py {{ $json.body.transcript_path }} --account-id={{ $json.body.account_id }}"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Respond A",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [750, 200],
+      "parameters": {
+        "options": {
+          "responseBody": "={{ $json.stdout }}",
+          "responseCode": 200
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "Webhook: Pipeline B",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 400],
+      "parameters": {
+        "path": "pipeline-b",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "5",
+      "name": "Execute: Pipeline B",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [500, 400],
+      "parameters": {
+        "command": "cd /app && python scripts/pipeline_b.py {{ $json.body.transcript_path }} --account-id={{ $json.body.account_id }}"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Respond B",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [750, 400],
+      "parameters": {
+        "options": {
+          "responseBody": "={{ $json.stdout }}",
+          "responseCode": 200
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "Webhook: Batch Run",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 600],
+      "parameters": {
+        "path": "batch-run",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "8",
+      "name": "Execute: Batch",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [500, 600],
+      "parameters": {
+        "command": "cd /app && python scripts/batch_run.py"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Respond Batch",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [750, 600],
+      "parameters": {
+        "options": {
+          "responseBody": "={{ $json.stdout }}",
+          "responseCode": 200
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook: Pipeline A": {
+      "main": [[{"node": "Execute: Pipeline A", "type": "main", "index": 0}]]
+    },
+    "Execute: Pipeline A": {
+      "main": [[{"node": "Respond A", "type": "main", "index": 0}]]
+    },
+    "Webhook: Pipeline B": {
+      "main": [[{"node": "Execute: Pipeline B", "type": "main", "index": 0}]]
+    },
+    "Execute: Pipeline B": {
+      "main": [[{"node": "Respond B", "type": "main", "index": 0}]]
+    },
+    "Webhook: Batch Run": {
+      "main": [[{"node": "Execute: Batch", "type": "main", "index": 0}]]
+    },
+    "Execute: Batch": {
+      "main": [[{"node": "Respond Batch", "type": "main", "index": 0}]]
+    }
+  }
+}
