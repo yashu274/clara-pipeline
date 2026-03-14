@@ -1,0 +1,195 @@
+{
+  "account_id": "ACC-001",
+  "generated_at": "2026-03-14T15:54:56.433253+00:00",
+  "summary": {
+    "memo_fields_changed": 18,
+    "system_prompt_changed": true,
+    "total_changes": 19
+  },
+  "memo_changes": [
+    {
+      "path": "after_hours_flow_summary",
+      "type": "modified",
+      "old": "Clara will triage after-hours emergency dispatch, get the info, and keep trying to reach someone.",
+      "new": "Collect name, number, brief description, and tell them we'll follow up next business day. No escalation."
+    },
+    {
+      "path": "business_hours.notes",
+      "type": "modified",
+      "old": null,
+      "new": "Closed on federal holidays"
+    },
+    {
+      "path": "business_hours.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.max_attempts",
+      "type": "modified",
+      "old": null,
+      "new": 1
+    },
+    {
+      "path": "call_transfer_rules.pre_transfer_message",
+      "type": "modified",
+      "old": null,
+      "new": "I was unable to reach our on-call team directly, but I've sent them your information and they'll call you back within 15 minutes. Please keep your phone nearby."
+    },
+    {
+      "path": "call_transfer_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.timeout_seconds",
+      "type": "modified",
+      "old": null,
+      "new": 45
+    },
+    {
+      "path": "call_transfer_rules.transfer_fail_message",
+      "type": "modified",
+      "old": null,
+      "new": "I was unable to reach our on-call team directly, but I've sent them your information and they'll call you back within 15 minutes. Please keep your phone nearby."
+    },
+    {
+      "path": "emergency_definition",
+      "type": "modified",
+      "old": [
+        "active sprinkler discharge",
+        "fire alarm activation",
+        "flooding or actively damaging property",
+        "smell of smoke",
+        "fire panel fault showing a live condition"
+      ],
+      "new": [
+        "Active sprinkler discharge",
+        "Fire alarm signal showing a live condition on a panel",
+        "Smoke smell reported at a site",
+        "Flooding from a pipe failure related to our systems",
+        "Fire panel fault showing a zone in alarm",
+        "Carbon monoxide alarm in a building we maintain"
+      ]
+    },
+    {
+      "path": "emergency_routing_rules",
+      "type": "modified",
+      "old": [
+        {
+          "order": 1,
+          "contact": "on-call dispatcher",
+          "phone": null,
+          "timeout_seconds": null
+        },
+        {
+          "order": 2,
+          "contact": "lead tech",
+          "phone": null,
+          "timeout_seconds": null
+        },
+        {
+          "order": 3,
+          "contact": "Diana Cho's cell",
+          "phone": null,
+          "timeout_seconds": null
+        }
+      ],
+      "new": [
+        {
+          "order": 1,
+          "contact": "Dispatch line",
+          "phone": "972-555-0148",
+          "timeout_seconds": 45
+        },
+        {
+          "order": 2,
+          "contact": "Brett Simmons",
+          "phone": "972-555-0291",
+          "timeout_seconds": 45
+        },
+        {
+          "order": 3,
+          "contact": "Diana Cho",
+          "phone": "972-555-0067",
+          "timeout_seconds": 45
+        }
+      ]
+    },
+    {
+      "path": "integration_constraints",
+      "type": "modified",
+      "old": [
+        "ServiceTrade"
+      ],
+      "new": [
+        "Never create a sprinkler job order directly from a Clara call",
+        "All jobs must go through our estimating team",
+        "Extinguisher work is okay, but not sprinkler or alarm panel work",
+        "Never quote prices"
+      ]
+    },
+    {
+      "path": "non_emergency_routing_rules.message_to_caller",
+      "type": "modified",
+      "old": null,
+      "new": "We'll follow up next business day."
+    },
+    {
+      "path": "non_emergency_routing_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "notes",
+      "type": "modified",
+      "old": null,
+      "new": "VIP accounts: Lone Star Brewery, DFW Airport Cargo (one warehouse), and Garland ISD"
+    },
+    {
+      "path": "office_address",
+      "type": "modified",
+      "old": "Garland, Texas",
+      "new": "2847 Rowlett Road, Garland, Texas 75043"
+    },
+    {
+      "path": "office_hours_flow_summary",
+      "type": "modified",
+      "old": "Clara will handle non-emergency requests, such as inspection requests, annual certification scheduling, and quote requests.",
+      "new": "Dispatch line, then Brett's cell, then Diana's cell, then send a text to all three numbers with the caller's information and log it."
+    },
+    {
+      "path": "questions_or_unknowns",
+      "type": "modified",
+      "old": [
+        "exact phone numbers for on-call dispatcher, lead tech, and Diana Cho",
+        "how to handle false positives",
+        "how to handle Spanish-speaking customers"
+      ],
+      "new": [
+        "how to handle false positives",
+        "how to handle Spanish-speaking customers",
+        "Clara Spanish option"
+      ]
+    },
+    {
+      "path": "services_supported",
+      "type": "modified",
+      "old": [
+        "commercial fire suppression",
+        "sprinkler systems",
+        "fire alarms",
+        "suppression systems for kitchens and server rooms"
+      ],
+      "new": [
+        "sprinkler",
+        "extinguisher",
+        "alarm panel"
+      ]
+    }
+  ],
+  "system_prompt_changed": true
+}

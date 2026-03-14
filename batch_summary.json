@@ -1,0 +1,79 @@
+{
+  "started_at": "2026-03-14T15:54:25.750185+00:00",
+  "elapsed_seconds": 83.7,
+  "pipeline_a": [
+    {
+      "account_id": "ACC-001",
+      "company_name": "FireGuard Protection Services",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-001/v1"
+    },
+    {
+      "account_id": "ACC-002",
+      "company_name": "ProSprinkler Solutions",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-002/v1"
+    },
+    {
+      "account_id": "ACC-003",
+      "company_name": "AlarmTech Security Systems",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-003/v1"
+    },
+    {
+      "account_id": "ACC-004",
+      "company_name": "BlueSky HVAC Services",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-004/v1"
+    },
+    {
+      "account_id": "ACC-005",
+      "company_name": "SafetyFirst Fire & Safety",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-005/v1"
+    }
+  ],
+  "pipeline_b": [
+    {
+      "account_id": "ACC-001",
+      "company_name": "FireGuard Protection Services",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-001/v2",
+      "changes": 19
+    },
+    {
+      "account_id": "ACC-002",
+      "company_name": "ProSprinkler Solutions",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-002/v2",
+      "changes": 17
+    },
+    {
+      "account_id": "ACC-003",
+      "company_name": "AlarmTech Security Systems",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-003/v2",
+      "changes": 13
+    },
+    {
+      "account_id": "ACC-004",
+      "company_name": "BlueSky HVAC Services",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-004/v2",
+      "changes": 16
+    },
+    {
+      "account_id": "ACC-005",
+      "company_name": "SafetyFirst Fire & Safety",
+      "status": "ok",
+      "output_dir": "/Users/yeswanth/Downloads/clara-pipeline/outputs/accounts/ACC-005/v2",
+      "changes": 10
+    }
+  ],
+  "totals": {
+    "a_ok": 5,
+    "a_errors": 0,
+    "b_ok": 5,
+    "b_errors": 0
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "account_id": "ACC-002",
+  "generated_at": "2026-03-14T15:55:07.366853+00:00",
+  "summary": {
+    "memo_fields_changed": 16,
+    "system_prompt_changed": true,
+    "total_changes": 17
+  },
+  "memo_changes": [
+    {
+      "path": "after_hours_flow_summary",
+      "type": "modified",
+      "old": "Clara will try to reach Kevin and then Dave during after-hours.",
+      "new": "Collect name, callback number, and one sentence about the issue. Tell them I'll call back next business day."
+    },
+    {
+      "path": "business_hours.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.pre_transfer_message",
+      "type": "modified",
+      "old": null,
+      "new": "We'll have someone contact you shortly."
+    },
+    {
+      "path": "call_transfer_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.timeout_seconds",
+      "type": "modified",
+      "old": null,
+      "new": 30
+    },
+    {
+      "path": "call_transfer_rules.transfer_fail_message",
+      "type": "modified",
+      "old": null,
+      "new": "I was unable to reach a technician directly. I've left an urgent message and Kevin will call you back within 30 minutes. Please stay available."
+    },
+    {
+      "path": "emergency_definition",
+      "type": "modified",
+      "old": [
+        "active water flow from a sprinkler head",
+        "visible flooding in a mechanical room",
+        "accidental head hit",
+        "fire panel alerts from a building that's currently occupied"
+      ],
+      "new": [
+        "Active water discharge from a sprinkler head",
+        "Accidental head activation",
+        "Flooding inside a building from a pipe failure"
+      ]
+    },
+    {
+      "path": "emergency_routing_rules",
+      "type": "modified",
+      "old": [
+        {
+          "order": 1,
+          "contact": "Kevin Okafor",
+          "phone": "312 area code (number not specified)",
+          "timeout_seconds": null
+        },
+        {
+          "order": 2,
+          "contact": "Dave (Kevin's tech)",
+          "phone": "312 area code (number not specified)",
+          "timeout_seconds": null
+        }
+      ],
+      "new": [
+        {
+          "order": 1,
+          "contact": "Kevin Okafor",
+          "phone": "312-555-0182",
+          "timeout_seconds": 30
+        },
+        {
+          "order": 2,
+          "contact": "Dave",
+          "phone": "312-555-0349",
+          "timeout_seconds": 30
+        }
+      ]
+    },
+    {
+      "path": "integration_constraints",
+      "type": "modified",
+      "old": [
+        "Google Sheets"
+      ],
+      "new": [
+        "Don't promise arrival times"
+      ]
+    },
+    {
+      "path": "non_emergency_routing_rules.message_to_caller",
+      "type": "modified",
+      "old": null,
+      "new": "I'll call back next business day."
+    },
+    {
+      "path": "non_emergency_routing_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "notes",
+      "type": "modified",
+      "old": null,
+      "new": "Keep it simple."
+    },
+    {
+      "path": "office_address",
+      "type": "modified",
+      "old": "Naperville, Illinois",
+      "new": "412 Ogden Avenue, Naperville, Illinois 60563"
+    },
+    {
+      "path": "office_hours_flow_summary",
+      "type": "modified",
+      "old": "Clara will try to reach Kevin and then Dave during business hours.",
+      "new": "Try my cell first — 312-555-0182. If I don't answer in 30 seconds, try Dave at 312-555-0349. If Dave doesn't answer in 30 seconds, leave a voicemail on my cell and tell the caller I'll call back within 30 minutes."
+    },
+    {
+      "path": "questions_or_unknowns",
+      "type": "modified",
+      "old": [
+        "exact escalation path",
+        "Dave's phone number"
+      ],
+      "new": [
+        "Special accounts",
+        "exact escalation path"
+      ]
+    },
+    {
+      "path": "services_supported",
+      "type": "modified",
+      "old": [
+        "sprinkler installation",
+        "sprinkler repair",
+        "inspection scheduling",
+        "quote requests"
+      ],
+      "new": [
+        "Sprinkler installation",
+        "Sprinkler repair",
+        "Sprinkler service",
+        "Backflow preventer testing",
+        "Annual inspections"
+      ]
+    }
+  ],
+  "system_prompt_changed": true
+}

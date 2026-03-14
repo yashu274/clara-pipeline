@@ -1,0 +1,69 @@
+{
+  "account_id": "ACC-003",
+  "company_name": "AlarmTech Security Systems",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "08:00",
+    "end": "17:30",
+    "timezone": "America/New_York",
+    "notes": null
+  },
+  "office_address": "Buckhead, Atlanta",
+  "services_supported": [
+    "fire and burglar alarms"
+  ],
+  "emergency_definition": [
+    "live alarm situation",
+    "break-ins",
+    "sensor malfunctioned"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "on-call tech",
+      "phone": null,
+      "timeout_seconds": null
+    },
+    {
+      "order": 2,
+      "contact": "monitoring coordinator",
+      "phone": null,
+      "timeout_seconds": null
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": null
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": null,
+    "timeout_seconds": null,
+    "max_attempts": null,
+    "transfer_fail_message": null
+  },
+  "integration_constraints": [
+    "no direct ticket creation in Alarm.com or ServiceMax"
+  ],
+  "after_hours_flow_summary": "Handle live alarm situations, break-ins, and sensor malfunctions.",
+  "office_hours_flow_summary": "Handle customer inquiries, low battery warnings, and sensor offline situations.",
+  "questions_or_unknowns": [
+    "timeout_seconds for emergency_routing_rules",
+    "phone numbers for emergency_routing_rules"
+  ],
+  "notes": null,
+  "_pipeline": "A",
+  "_source_file": "demo_003_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:28.224510+00:00",
+  "_version": "v1"
+}

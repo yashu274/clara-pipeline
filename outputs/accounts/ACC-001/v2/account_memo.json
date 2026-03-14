@@ -1,0 +1,89 @@
+{
+  "account_id": "ACC-001",
+  "company_name": "FireGuard Protection Services",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "08:00",
+    "end": "17:00",
+    "timezone": "America/Chicago",
+    "notes": "Closed on federal holidays",
+    "questions_or_unknowns": []
+  },
+  "office_address": "2847 Rowlett Road, Garland, Texas 75043",
+  "services_supported": [
+    "sprinkler",
+    "extinguisher",
+    "alarm panel"
+  ],
+  "emergency_definition": [
+    "Active sprinkler discharge",
+    "Fire alarm signal showing a live condition on a panel",
+    "Smoke smell reported at a site",
+    "Flooding from a pipe failure related to our systems",
+    "Fire panel fault showing a zone in alarm",
+    "Carbon monoxide alarm in a building we maintain"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "Dispatch line",
+      "phone": "972-555-0148",
+      "timeout_seconds": 45
+    },
+    {
+      "order": 2,
+      "contact": "Brett Simmons",
+      "phone": "972-555-0291",
+      "timeout_seconds": 45
+    },
+    {
+      "order": 3,
+      "contact": "Diana Cho",
+      "phone": "972-555-0067",
+      "timeout_seconds": 45
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": "We'll follow up next business day.",
+    "questions_or_unknowns": []
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": "I was unable to reach our on-call team directly, but I've sent them your information and they'll call you back within 15 minutes. Please keep your phone nearby.",
+    "timeout_seconds": 45,
+    "max_attempts": 1,
+    "transfer_fail_message": "I was unable to reach our on-call team directly, but I've sent them your information and they'll call you back within 15 minutes. Please keep your phone nearby.",
+    "questions_or_unknowns": []
+  },
+  "integration_constraints": [
+    "Never create a sprinkler job order directly from a Clara call",
+    "All jobs must go through our estimating team",
+    "Extinguisher work is okay, but not sprinkler or alarm panel work",
+    "Never quote prices"
+  ],
+  "after_hours_flow_summary": "Collect name, number, brief description, and tell them we'll follow up next business day. No escalation.",
+  "office_hours_flow_summary": "Dispatch line, then Brett's cell, then Diana's cell, then send a text to all three numbers with the caller's information and log it.",
+  "questions_or_unknowns": [
+    "how to handle false positives",
+    "how to handle Spanish-speaking customers",
+    "Clara Spanish option"
+  ],
+  "notes": "VIP accounts: Lone Star Brewery, DFW Airport Cargo (one warehouse), and Garland ISD",
+  "_pipeline": "B",
+  "_source_file": "onboarding_001_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:26.691838+00:00",
+  "_version": "v2",
+  "_onboarding_extracted_at": "2026-03-14T15:54:56.429365+00:00",
+  "_previous_version": "v1"
+}

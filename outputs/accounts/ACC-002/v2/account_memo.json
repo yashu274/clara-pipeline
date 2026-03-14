@@ -1,0 +1,78 @@
+{
+  "account_id": "ACC-002",
+  "company_name": "ProSprinkler Solutions",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "07:00",
+    "end": "18:00",
+    "timezone": "America/Chicago",
+    "notes": null,
+    "questions_or_unknowns": []
+  },
+  "office_address": "412 Ogden Avenue, Naperville, Illinois 60563",
+  "services_supported": [
+    "Sprinkler installation",
+    "Sprinkler repair",
+    "Sprinkler service",
+    "Backflow preventer testing",
+    "Annual inspections"
+  ],
+  "emergency_definition": [
+    "Active water discharge from a sprinkler head",
+    "Accidental head activation",
+    "Flooding inside a building from a pipe failure"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "Kevin Okafor",
+      "phone": "312-555-0182",
+      "timeout_seconds": 30
+    },
+    {
+      "order": 2,
+      "contact": "Dave",
+      "phone": "312-555-0349",
+      "timeout_seconds": 30
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": "I'll call back next business day.",
+    "questions_or_unknowns": []
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": "We'll have someone contact you shortly.",
+    "timeout_seconds": 30,
+    "max_attempts": null,
+    "transfer_fail_message": "I was unable to reach a technician directly. I've left an urgent message and Kevin will call you back within 30 minutes. Please stay available.",
+    "questions_or_unknowns": []
+  },
+  "integration_constraints": [
+    "Don't promise arrival times"
+  ],
+  "after_hours_flow_summary": "Collect name, callback number, and one sentence about the issue. Tell them I'll call back next business day.",
+  "office_hours_flow_summary": "Try my cell first — 312-555-0182. If I don't answer in 30 seconds, try Dave at 312-555-0349. If Dave doesn't answer in 30 seconds, leave a voicemail on my cell and tell the caller I'll call back within 30 minutes.",
+  "questions_or_unknowns": [
+    "Special accounts",
+    "exact escalation path"
+  ],
+  "notes": "Keep it simple.",
+  "_pipeline": "B",
+  "_source_file": "onboarding_002_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:27.491398+00:00",
+  "_version": "v2",
+  "_onboarding_extracted_at": "2026-03-14T15:55:07.362813+00:00",
+  "_previous_version": "v1"
+}

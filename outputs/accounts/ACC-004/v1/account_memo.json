@@ -1,0 +1,78 @@
+{
+  "account_id": "ACC-004",
+  "company_name": "BlueSky HVAC Services",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "07:00",
+    "end": "17:00",
+    "timezone": "America/Phoenix",
+    "notes": "Limited Saturday hours from May to September: 08:00 to 12:00"
+  },
+  "office_address": "Tempe, Arizona",
+  "services_supported": [
+    "Commercial HVAC",
+    "Rooftop units",
+    "Chillers",
+    "Boilers",
+    "Routine maintenance",
+    "Filter replacements",
+    "Seasonal check-ups",
+    "Quotes for new installs"
+  ],
+  "emergency_definition": [
+    "Heat-related failures",
+    "Building is uncomfortable or at risk",
+    "Walk-in cooler down",
+    "No cooling in August",
+    "Office building AC out on a Monday morning",
+    "Server room overheating"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "Pam (dispatch coordinator)",
+      "phone": null,
+      "timeout_seconds": 30
+    },
+    {
+      "order": 2,
+      "contact": "On-call tech",
+      "phone": null,
+      "timeout_seconds": null
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": "Short and professional. We'll make it efficient."
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": "Short and professional. That's what I want.",
+    "timeout_seconds": null,
+    "max_attempts": null,
+    "transfer_fail_message": "Transfer failed. Please try again."
+  },
+  "integration_constraints": [
+    "Do not create work orders in ServiceTitan. Pam handles that."
+  ],
+  "after_hours_flow_summary": "After-hours calls are handled by on-call techs. If Pam is unavailable, go to the on-call tech.",
+  "office_hours_flow_summary": "During business hours, callers are routed to Pam first. If Pam doesn't answer, go to the on-call tech.",
+  "questions_or_unknowns": [
+    "VIP routing rule for Pinnacle Hotels"
+  ],
+  "notes": "Pinnacle Hotels have a separate priority line.",
+  "_pipeline": "A",
+  "_source_file": "demo_004_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:29.150160+00:00",
+  "_version": "v1"
+}

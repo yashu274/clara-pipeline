@@ -1,0 +1,73 @@
+{
+  "account_id": "ACC-002",
+  "company_name": "ProSprinkler Solutions",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "07:00",
+    "end": "18:00",
+    "timezone": "America/Chicago",
+    "notes": null
+  },
+  "office_address": "Naperville, Illinois",
+  "services_supported": [
+    "sprinkler installation",
+    "sprinkler repair",
+    "inspection scheduling",
+    "quote requests"
+  ],
+  "emergency_definition": [
+    "active water flow from a sprinkler head",
+    "visible flooding in a mechanical room",
+    "accidental head hit",
+    "fire panel alerts from a building that's currently occupied"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "Kevin Okafor",
+      "phone": "312 area code (number not specified)",
+      "timeout_seconds": null
+    },
+    {
+      "order": 2,
+      "contact": "Dave (Kevin's tech)",
+      "phone": "312 area code (number not specified)",
+      "timeout_seconds": null
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": null
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": null,
+    "timeout_seconds": null,
+    "max_attempts": null,
+    "transfer_fail_message": null
+  },
+  "integration_constraints": [
+    "Google Sheets"
+  ],
+  "after_hours_flow_summary": "Clara will try to reach Kevin and then Dave during after-hours.",
+  "office_hours_flow_summary": "Clara will try to reach Kevin and then Dave during business hours.",
+  "questions_or_unknowns": [
+    "exact escalation path",
+    "Dave's phone number"
+  ],
+  "notes": null,
+  "_pipeline": "A",
+  "_source_file": "demo_002_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:27.491398+00:00",
+  "_version": "v1"
+}

@@ -1,0 +1,82 @@
+{
+  "account_id": "ACC-004",
+  "company_name": "BlueSky HVAC Services",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "07:00",
+    "end": "17:00",
+    "timezone": "America/Denver",
+    "notes": "Limited Saturday hours from May to September: 08:00 to 12:00",
+    "questions_or_unknowns": []
+  },
+  "office_address": "901 S Mill Avenue, Suite 110, Tempe, Arizona 85281",
+  "services_supported": [
+    "Commercial HVAC repair and maintenance",
+    "Chiller and boiler service",
+    "Rooftop unit repair",
+    "Preventive maintenance contracts",
+    "New commercial installs"
+  ],
+  "emergency_definition": [
+    "Complete cooling failure in an occupied commercial building",
+    "Server room overheating",
+    "Walk-in cooler or freezer failure at a food service location",
+    "Boiler failure in winter when the building is occupied",
+    "Gas smell near HVAC equipment"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "Pam Nguyen (Dispatch Coordinator)",
+      "phone": "480-555-0193",
+      "timeout_seconds": 30
+    },
+    {
+      "order": 2,
+      "contact": "On-call tech (variable)",
+      "phone": "480-555-0276",
+      "timeout_seconds": null
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": "We'll respond next business day. If it's Saturday during our summer hours, someone might call back same day.",
+    "questions_or_unknowns": []
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": "Short and professional. That's what I want.",
+    "timeout_seconds": 30,
+    "max_attempts": null,
+    "transfer_fail_message": "I was unable to reach our on-call team directly. I've sent them your information and someone will call you within 20 minutes. Please stay near your phone.",
+    "questions_or_unknowns": []
+  },
+  "integration_constraints": [
+    "Don't create work orders from calls",
+    "Don't promise any arrival windows",
+    "Don't tell customers what parts cost — we quote after diagnosis"
+  ],
+  "after_hours_flow_summary": "Collect name, number, company name, and brief description. Tell them we'll respond next business day. If it's Saturday during our summer hours, someone might call back same day.",
+  "office_hours_flow_summary": "Standard: Monday through Friday, 7am to 5pm Mountain time. And May 1 through September 30, we also do Saturdays 8am to noon, Mountain time.",
+  "questions_or_unknowns": [
+    "Pinnacle Hotels client calling numbers",
+    "On-call tech rotation schedule"
+  ],
+  "notes": "Pinnacle Hotels have a separate priority line.",
+  "_pipeline": "B",
+  "_source_file": "onboarding_004_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:29.150160+00:00",
+  "_version": "v2",
+  "_onboarding_extracted_at": "2026-03-14T15:55:34.478004+00:00",
+  "_previous_version": "v1"
+}

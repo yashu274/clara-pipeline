@@ -1,0 +1,15 @@
+{
+  "account_id": "ACC-001",
+  "title": "[Clara] FireGuard Protection Services — V1 agent generated (ACC-001)",
+  "body": "**Account ID:** ACC-001\n**Company:** FireGuard Protection Services\n**Version:** v1\n**Business Hours:** ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] 08:00–17:00 America/Chicago\n**Services:** commercial fire suppression, sprinkler systems, fire alarms, suppression systems for kitchens and server rooms\n\n**Open Questions / Unknowns:**\n- exact phone numbers for on-call dispatcher, lead tech, and Diana Cho\n- how to handle false positives\n- how to handle Spanish-speaking customers\n\n**Next Steps:**\n- [ ] Review generated agent spec\n- [ ] Confirm transfer phone numbers\n- [ ] Import spec into Retell dashboard\n- [ ] Schedule test call\n",
+  "status": "open",
+  "created_at": "2026-03-14T15:54:26.694192+00:00",
+  "backend": "local",
+  "last_updated": "2026-03-14T15:54:56.440420+00:00",
+  "updates": [
+    {
+      "at": "2026-03-14T15:54:56.440444+00:00",
+      "message": "Onboarding complete — v2 generated with 19 changes."
+    }
+  ]
+}

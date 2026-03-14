@@ -1,0 +1,151 @@
+{
+  "account_id": "ACC-003",
+  "generated_at": "2026-03-14T15:55:20.434749+00:00",
+  "summary": {
+    "memo_fields_changed": 12,
+    "system_prompt_changed": true,
+    "total_changes": 13
+  },
+  "memo_changes": [
+    {
+      "path": "business_hours.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.timeout_seconds",
+      "type": "modified",
+      "old": null,
+      "new": 40
+    },
+    {
+      "path": "call_transfer_rules.transfer_fail_message",
+      "type": "modified",
+      "old": null,
+      "new": "I was unable to reach our on-call team right now. I have your information and our operations team has been notified by alert. Someone will contact you within 20 minutes."
+    },
+    {
+      "path": "emergency_definition",
+      "type": "modified",
+      "old": [
+        "live alarm situation",
+        "break-ins",
+        "sensor malfunctioned"
+      ],
+      "new": [
+        "Live alarm signal from a monitored account",
+        "Customer reports break-in in progress or has confirmed a fire",
+        "Malfunctioning system causing false alarms",
+        "Customer's panel is offline and their building is unprotected"
+      ]
+    },
+    {
+      "path": "emergency_routing_rules",
+      "type": "modified",
+      "old": [
+        {
+          "order": 1,
+          "contact": "on-call tech",
+          "phone": null,
+          "timeout_seconds": null
+        },
+        {
+          "order": 2,
+          "contact": "monitoring coordinator",
+          "phone": null,
+          "timeout_seconds": null
+        }
+      ],
+      "new": [
+        {
+          "order": 1,
+          "contact": "Priya, monitoring coordinator",
+          "phone": "404-555-0217",
+          "timeout_seconds": 40
+        },
+        {
+          "order": 2,
+          "contact": "Mike, Lead Technician",
+          "phone": "404-555-0382",
+          "timeout_seconds": 40
+        },
+        {
+          "order": 3,
+          "contact": "James, backup coordinator",
+          "phone": "404-555-0459",
+          "timeout_seconds": null
+        }
+      ]
+    },
+    {
+      "path": "integration_constraints",
+      "type": "modified",
+      "old": [
+        "no direct ticket creation in Alarm.com or ServiceMax"
+      ],
+      "new": [
+        "Clara must never promise to create a ticket in ServiceMax",
+        "Never confirm monitoring status over the phone",
+        "Never give out technician cell numbers to customers"
+      ]
+    },
+    {
+      "path": "non_emergency_routing_rules.collect_fields",
+      "type": "modified",
+      "old": [
+        "name",
+        "phone",
+        "description"
+      ],
+      "new": [
+        "name",
+        "phone",
+        "account number",
+        "description"
+      ]
+    },
+    {
+      "path": "non_emergency_routing_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "office_address",
+      "type": "modified",
+      "old": "Buckhead, Atlanta",
+      "new": "3100 Piedmont Road NE, Suite 200, Atlanta, Georgia 30305"
+    },
+    {
+      "path": "questions_or_unknowns",
+      "type": "modified",
+      "old": [
+        "timeout_seconds for emergency_routing_rules",
+        "phone numbers for emergency_routing_rules"
+      ],
+      "new": []
+    },
+    {
+      "path": "services_supported",
+      "type": "modified",
+      "old": [
+        "fire and burglar alarms"
+      ],
+      "new": [
+        "Fire alarm installation and monitoring",
+        "Burglar alarm installation and monitoring",
+        "Access control",
+        "CCTV",
+        "Annual inspections"
+      ]
+    }
+  ],
+  "system_prompt_changed": true
+}

@@ -1,0 +1,15 @@
+{
+  "account_id": "ACC-004",
+  "title": "[Clara] BlueSky HVAC Services — V1 agent generated (ACC-004)",
+  "body": "**Account ID:** ACC-004\n**Company:** BlueSky HVAC Services\n**Version:** v1\n**Business Hours:** ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] 07:00–17:00 America/Phoenix\n**Services:** Commercial HVAC, Rooftop units, Chillers, Boilers, Routine maintenance, Filter replacements, Seasonal check-ups, Quotes for new installs\n\n**Open Questions / Unknowns:**\n- VIP routing rule for Pinnacle Hotels\n\n**Next Steps:**\n- [ ] Review generated agent spec\n- [ ] Confirm transfer phone numbers\n- [ ] Import spec into Retell dashboard\n- [ ] Schedule test call\n",
+  "status": "open",
+  "created_at": "2026-03-14T15:54:29.153620+00:00",
+  "backend": "local",
+  "last_updated": "2026-03-14T15:55:34.485380+00:00",
+  "updates": [
+    {
+      "at": "2026-03-14T15:55:34.485393+00:00",
+      "message": "Onboarding complete — v2 generated with 16 changes."
+    }
+  ]
+}

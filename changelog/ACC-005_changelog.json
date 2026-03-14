@@ -1,0 +1,106 @@
+{
+  "account_id": "ACC-005",
+  "generated_at": "2026-03-14T15:55:49.398201+00:00",
+  "summary": {
+    "memo_fields_changed": 9,
+    "system_prompt_changed": true,
+    "total_changes": 10
+  },
+  "memo_changes": [
+    {
+      "path": "after_hours_flow_summary",
+      "type": "modified",
+      "old": "Collect caller's information and tell them we'll call back next business day.",
+      "new": "For after-hours: true emergency is extinguisher failure in a fire, or post-discharge suppression inspection. Everything else is next business day."
+    },
+    {
+      "path": "business_hours.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "emergency_definition",
+      "type": "modified",
+      "old": [
+        "extinguisher failure during a fire event",
+        "condemned suppression system"
+      ],
+      "new": [
+        "Fire extinguisher that failed to operate during an actual fire event",
+        "Kitchen suppression system that discharged and needs immediate inspection before the restaurant can reopen"
+      ]
+    },
+    {
+      "path": "emergency_routing_rules",
+      "type": "modified",
+      "old": [
+        {
+          "order": 1,
+          "contact": "911",
+          "phone": "911",
+          "timeout_seconds": null
+        }
+      ],
+      "new": [
+        {
+          "order": 1,
+          "contact": "Raymond Torres",
+          "phone": "713-555-0182",
+          "timeout_seconds": 30
+        }
+      ]
+    },
+    {
+      "path": "integration_constraints",
+      "type": "modified",
+      "old": [
+        "do not create anything in Wintac",
+        "do not promise anything to customers about upcoming inspections"
+      ],
+      "new": [
+        "Never create anything in Wintac from a call",
+        "Never quote prices",
+        "Don't promise inspection dates"
+      ]
+    },
+    {
+      "path": "non_emergency_routing_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "office_address",
+      "type": "modified",
+      "old": "Houston, Texas, in the Heights neighborhood",
+      "new": "1402 Heights Boulevard, Houston, Texas 77008"
+    },
+    {
+      "path": "services_supported",
+      "type": "modified",
+      "old": [
+        "fire extinguisher sales",
+        "service",
+        "certification",
+        "exit and emergency lighting inspection"
+      ],
+      "new": [
+        "Fire extinguisher sales",
+        "Fire extinguisher service",
+        "Annual certification",
+        "Emergency lighting inspection",
+        "Exit sign inspection",
+        "Kitchen hood suppression system inspection",
+        "Fire safety training"
+      ]
+    }
+  ],
+  "system_prompt_changed": true
+}

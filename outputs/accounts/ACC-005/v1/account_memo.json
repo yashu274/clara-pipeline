@@ -1,0 +1,65 @@
+{
+  "account_id": "ACC-005",
+  "company_name": "SafetyFirst Fire & Safety",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "08:00",
+    "end": "17:00",
+    "timezone": "America/Chicago",
+    "notes": null
+  },
+  "office_address": "Houston, Texas, in the Heights neighborhood",
+  "services_supported": [
+    "fire extinguisher sales",
+    "service",
+    "certification",
+    "exit and emergency lighting inspection"
+  ],
+  "emergency_definition": [
+    "extinguisher failure during a fire event",
+    "condemned suppression system"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "911",
+      "phone": "911",
+      "timeout_seconds": null
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": "We'll call back next business day."
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": "We'll call back next business day.",
+    "timeout_seconds": null,
+    "max_attempts": null,
+    "transfer_fail_message": null
+  },
+  "integration_constraints": [
+    "do not create anything in Wintac",
+    "do not promise anything to customers about upcoming inspections"
+  ],
+  "after_hours_flow_summary": "Collect caller's information and tell them we'll call back next business day.",
+  "office_hours_flow_summary": "Answer call, collect name, number, and brief description, and schedule follow-up call.",
+  "questions_or_unknowns": [
+    "How to handle a caller listing 20 items they need serviced"
+  ],
+  "notes": null,
+  "_pipeline": "A",
+  "_source_file": "demo_005_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:42.300361+00:00",
+  "_version": "v1"
+}

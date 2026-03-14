@@ -1,0 +1,15 @@
+{
+  "account_id": "ACC-002",
+  "title": "[Clara] ProSprinkler Solutions — V1 agent generated (ACC-002)",
+  "body": "**Account ID:** ACC-002\n**Company:** ProSprinkler Solutions\n**Version:** v1\n**Business Hours:** ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] 07:00–18:00 America/Chicago\n**Services:** sprinkler installation, sprinkler repair, inspection scheduling, quote requests\n\n**Open Questions / Unknowns:**\n- exact escalation path\n- Dave's phone number\n\n**Next Steps:**\n- [ ] Review generated agent spec\n- [ ] Confirm transfer phone numbers\n- [ ] Import spec into Retell dashboard\n- [ ] Schedule test call\n",
+  "status": "open",
+  "created_at": "2026-03-14T15:54:27.494303+00:00",
+  "backend": "local",
+  "last_updated": "2026-03-14T15:55:07.369196+00:00",
+  "updates": [
+    {
+      "at": "2026-03-14T15:55:07.369213+00:00",
+      "message": "Onboarding complete — v2 generated with 17 changes."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "account_id": "ACC-001",
+  "company_name": "FireGuard Protection Services",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "08:00",
+    "end": "17:00",
+    "timezone": "America/Chicago",
+    "notes": null
+  },
+  "office_address": "Garland, Texas",
+  "services_supported": [
+    "commercial fire suppression",
+    "sprinkler systems",
+    "fire alarms",
+    "suppression systems for kitchens and server rooms"
+  ],
+  "emergency_definition": [
+    "active sprinkler discharge",
+    "fire alarm activation",
+    "flooding or actively damaging property",
+    "smell of smoke",
+    "fire panel fault showing a live condition"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "on-call dispatcher",
+      "phone": null,
+      "timeout_seconds": null
+    },
+    {
+      "order": 2,
+      "contact": "lead tech",
+      "phone": null,
+      "timeout_seconds": null
+    },
+    {
+      "order": 3,
+      "contact": "Diana Cho's cell",
+      "phone": null,
+      "timeout_seconds": null
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "description"
+    ],
+    "message_to_caller": null
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": null,
+    "timeout_seconds": null,
+    "max_attempts": null,
+    "transfer_fail_message": null
+  },
+  "integration_constraints": [
+    "ServiceTrade"
+  ],
+  "after_hours_flow_summary": "Clara will triage after-hours emergency dispatch, get the info, and keep trying to reach someone.",
+  "office_hours_flow_summary": "Clara will handle non-emergency requests, such as inspection requests, annual certification scheduling, and quote requests.",
+  "questions_or_unknowns": [
+    "exact phone numbers for on-call dispatcher, lead tech, and Diana Cho",
+    "how to handle false positives",
+    "how to handle Spanish-speaking customers"
+  ],
+  "notes": null,
+  "_pipeline": "A",
+  "_source_file": "demo_001_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:26.691838+00:00",
+  "_version": "v1"
+}

@@ -1,0 +1,167 @@
+{
+  "account_id": "ACC-004",
+  "generated_at": "2026-03-14T15:55:34.482258+00:00",
+  "summary": {
+    "memo_fields_changed": 15,
+    "system_prompt_changed": true,
+    "total_changes": 16
+  },
+  "memo_changes": [
+    {
+      "path": "after_hours_flow_summary",
+      "type": "modified",
+      "old": "After-hours calls are handled by on-call techs. If Pam is unavailable, go to the on-call tech.",
+      "new": "Collect name, number, company name, and brief description. Tell them we'll respond next business day. If it's Saturday during our summer hours, someone might call back same day."
+    },
+    {
+      "path": "business_hours.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "business_hours.timezone",
+      "type": "modified",
+      "old": "America/Phoenix",
+      "new": "America/Denver"
+    },
+    {
+      "path": "call_transfer_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "call_transfer_rules.timeout_seconds",
+      "type": "modified",
+      "old": null,
+      "new": 30
+    },
+    {
+      "path": "call_transfer_rules.transfer_fail_message",
+      "type": "modified",
+      "old": "Transfer failed. Please try again.",
+      "new": "I was unable to reach our on-call team directly. I've sent them your information and someone will call you within 20 minutes. Please stay near your phone."
+    },
+    {
+      "path": "emergency_definition",
+      "type": "modified",
+      "old": [
+        "Heat-related failures",
+        "Building is uncomfortable or at risk",
+        "Walk-in cooler down",
+        "No cooling in August",
+        "Office building AC out on a Monday morning",
+        "Server room overheating"
+      ],
+      "new": [
+        "Complete cooling failure in an occupied commercial building",
+        "Server room overheating",
+        "Walk-in cooler or freezer failure at a food service location",
+        "Boiler failure in winter when the building is occupied",
+        "Gas smell near HVAC equipment"
+      ]
+    },
+    {
+      "path": "emergency_routing_rules",
+      "type": "modified",
+      "old": [
+        {
+          "order": 1,
+          "contact": "Pam (dispatch coordinator)",
+          "phone": null,
+          "timeout_seconds": 30
+        },
+        {
+          "order": 2,
+          "contact": "On-call tech",
+          "phone": null,
+          "timeout_seconds": null
+        }
+      ],
+      "new": [
+        {
+          "order": 1,
+          "contact": "Pam Nguyen (Dispatch Coordinator)",
+          "phone": "480-555-0193",
+          "timeout_seconds": 30
+        },
+        {
+          "order": 2,
+          "contact": "On-call tech (variable)",
+          "phone": "480-555-0276",
+          "timeout_seconds": null
+        }
+      ]
+    },
+    {
+      "path": "integration_constraints",
+      "type": "modified",
+      "old": [
+        "Do not create work orders in ServiceTitan. Pam handles that."
+      ],
+      "new": [
+        "Don't create work orders from calls",
+        "Don't promise any arrival windows",
+        "Don't tell customers what parts cost — we quote after diagnosis"
+      ]
+    },
+    {
+      "path": "non_emergency_routing_rules.message_to_caller",
+      "type": "modified",
+      "old": "Short and professional. We'll make it efficient.",
+      "new": "We'll respond next business day. If it's Saturday during our summer hours, someone might call back same day."
+    },
+    {
+      "path": "non_emergency_routing_rules.questions_or_unknowns",
+      "type": "added",
+      "old": null,
+      "new": []
+    },
+    {
+      "path": "office_address",
+      "type": "modified",
+      "old": "Tempe, Arizona",
+      "new": "901 S Mill Avenue, Suite 110, Tempe, Arizona 85281"
+    },
+    {
+      "path": "office_hours_flow_summary",
+      "type": "modified",
+      "old": "During business hours, callers are routed to Pam first. If Pam doesn't answer, go to the on-call tech.",
+      "new": "Standard: Monday through Friday, 7am to 5pm Mountain time. And May 1 through September 30, we also do Saturdays 8am to noon, Mountain time."
+    },
+    {
+      "path": "questions_or_unknowns",
+      "type": "modified",
+      "old": [
+        "VIP routing rule for Pinnacle Hotels"
+      ],
+      "new": [
+        "Pinnacle Hotels client calling numbers",
+        "On-call tech rotation schedule"
+      ]
+    },
+    {
+      "path": "services_supported",
+      "type": "modified",
+      "old": [
+        "Commercial HVAC",
+        "Rooftop units",
+        "Chillers",
+        "Boilers",
+        "Routine maintenance",
+        "Filter replacements",
+        "Seasonal check-ups",
+        "Quotes for new installs"
+      ],
+      "new": [
+        "Commercial HVAC repair and maintenance",
+        "Chiller and boiler service",
+        "Rooftop unit repair",
+        "Preventive maintenance contracts",
+        "New commercial installs"
+      ]
+    }
+  ],
+  "system_prompt_changed": true
+}

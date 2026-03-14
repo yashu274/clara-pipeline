@@ -1,0 +1,85 @@
+{
+  "account_id": "ACC-003",
+  "company_name": "AlarmTech Security Systems",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "08:00",
+    "end": "17:30",
+    "timezone": "America/New_York",
+    "notes": null,
+    "questions_or_unknowns": []
+  },
+  "office_address": "3100 Piedmont Road NE, Suite 200, Atlanta, Georgia 30305",
+  "services_supported": [
+    "Fire alarm installation and monitoring",
+    "Burglar alarm installation and monitoring",
+    "Access control",
+    "CCTV",
+    "Annual inspections"
+  ],
+  "emergency_definition": [
+    "Live alarm signal from a monitored account",
+    "Customer reports break-in in progress or has confirmed a fire",
+    "Malfunctioning system causing false alarms",
+    "Customer's panel is offline and their building is unprotected"
+  ],
+  "emergency_routing_rules": [
+    {
+      "order": 1,
+      "contact": "Priya, monitoring coordinator",
+      "phone": "404-555-0217",
+      "timeout_seconds": 40
+    },
+    {
+      "order": 2,
+      "contact": "Mike, Lead Technician",
+      "phone": "404-555-0382",
+      "timeout_seconds": 40
+    },
+    {
+      "order": 3,
+      "contact": "James, backup coordinator",
+      "phone": "404-555-0459",
+      "timeout_seconds": null
+    }
+  ],
+  "non_emergency_routing_rules": {
+    "action": "collect_info",
+    "collect_fields": [
+      "name",
+      "phone",
+      "account number",
+      "description"
+    ],
+    "message_to_caller": null,
+    "questions_or_unknowns": []
+  },
+  "call_transfer_rules": {
+    "pre_transfer_message": null,
+    "timeout_seconds": 40,
+    "max_attempts": null,
+    "transfer_fail_message": "I was unable to reach our on-call team right now. I have your information and our operations team has been notified by alert. Someone will contact you within 20 minutes.",
+    "questions_or_unknowns": []
+  },
+  "integration_constraints": [
+    "Clara must never promise to create a ticket in ServiceMax",
+    "Never confirm monitoring status over the phone",
+    "Never give out technician cell numbers to customers"
+  ],
+  "after_hours_flow_summary": "Handle live alarm situations, break-ins, and sensor malfunctions.",
+  "office_hours_flow_summary": "Handle customer inquiries, low battery warnings, and sensor offline situations.",
+  "questions_or_unknowns": [],
+  "notes": null,
+  "_pipeline": "B",
+  "_source_file": "onboarding_003_transcript.txt",
+  "_extracted_at": "2026-03-14T15:54:28.224510+00:00",
+  "_version": "v2",
+  "_onboarding_extracted_at": "2026-03-14T15:55:20.430648+00:00",
+  "_previous_version": "v1"
+}
